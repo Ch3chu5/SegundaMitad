@@ -17,6 +17,13 @@ def calculo_promedio(contenido):
     #nf = 15
     #Al probar el modulo con un valor fijo de nf, el valor se envia a tracves del servidor;  pero
     #al ejecutar con las lineas de comando que se usan para calcular la nota final, hay un problema de tipos al usar np.mean
+
+    
+
+    #El problema que estás experimentando se debe a que la función np.mean() solo puede calcular la media de una matriz de números. En tu caso, la función np.mean() está tratando de calcular la media de una lista de cadenas de caracteres.
+    #Para solucionar este problema, puedes usar la función np.asarray() para convertir la lista de cadenas de caracteres a una matriz de números. La función np.asarray() convierte cada elemento de la lista a un número.
+
+    
     return nf
 import socket
 import numpy as np
